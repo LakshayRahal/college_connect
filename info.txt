@@ -1,0 +1,7 @@
+alert function is used to give a dialog box with OK
+window.location.href("") is used to navigate to different file
+document.getelementbyId or ClassName is used to access element of HTML
+after that we add the functions to do some task
+Plugins in Maven enhance its functionality by enabling automation, customization, and integration with external tools in Java projects. They streamline the build process, manage dependencies, execute tasks at specific lifecycle phases, and provide flexibility to tailor the build environment according to project requirements. Understanding and effectively utilizing Maven plugins is essential for optimizing development workflows and ensuring efficient project management.
+@Data Annotation: Lombok annotation that automatically generates boilerplate code for getters, setters, equals, hashCode, and toString methods.
+@Entity Annotation: JPA annotation indicating that this class is an entity that maps to a database table.

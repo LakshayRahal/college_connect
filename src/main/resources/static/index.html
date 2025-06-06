@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+        <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="contain">
+        <div class="left">
+            <h1>COLLEGE <span class="color">CONNECT</span></h1>
+            <div class="leftflex">
+              
+
+            <div class="menu">Menu</div>
+            <div class="flex123">
+                <div><ion-icon name="grid"></ion-icon></div>
+                <a href="#"onclick="showSection('dashboard-section')">Dashboard</a>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;</div>
+            </div>
+            <div class="flex123">
+                <div><ion-icon name="save"></ion-icon></div>
+                <a href="#"onclick="showSection('category-section')">Category</a>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="chevron-forward"></ion-icon></div>
+            </div>
+            
+            <div class="flex123">
+                <div><ion-icon name="scale"></ion-icon></div>
+                <a href="#"onclick="showSection('subcategory-section')">Sub Category</a>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="chevron-forward"></ion-icon></div>
+            </div>
+            <div class="flex123">
+                <div><ion-icon name="chatbox"></ion-icon></div><a href="#"onclick="showSection('posts-section')">Posts</a>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="chevron-forward"></ion-icon></div>
+            </div>
+            <div class="flex123">
+                <div><ion-icon name="copy"></ion-icon></div>
+                <a href="#"onclick="showSection('pages-section')">Pages</a>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="chevron-forward"></ion-icon></div>
+            </div>
+            <div class="flex123" >
+                <div><ion-icon name="chatbubble-ellipses"></ion-icon></div>
+                <a href="#"onclick="showSection('comments-section')">Comments</a>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="chevron-forward"></ion-icon></div>
+            </div>
+                
+            </div>
+        </div>
+    
+        <div class="right">
+            <div class="right1">
+    <header>
+        <div><ion-icon name="menu"></ion-icon></div>
+        <div id="home">
+            <div id="homeid" ><a href="#">Home</a></div>
+       <div><ion-icon name="person-circle"></ion-icon></div> </div>
+    </header>
+    <div id="content">
+        <section id="dashboard-section" class="section">
+            <div class="card">
+    <div class="bottomborder">Dashboard</div>
+    <div class="content">
+    <div class="box1">
+       <div>
+        <ion-icon name="filter"></ion-icon>
+       </div>
+       <div>
+        Categories Listed
+       </div>
+       <div id="categoryno1">2</div>
+    </div>
+    <div class="box2">
+        <div>
+         <ion-icon name="layers"></ion-icon>
+        </div>
+        <div>
+         Listed SubCategories
+        </div>
+        <div id="categoryno2">2</div>
+     </div>
+     <div class="box3 ">
+        <div>
+         <ion-icon name="layers"></ion-icon>
+        </div>
+        <div>
+         Live Updates
+        </div>
+        <div id="categoryno3 ">0</div>
+     </div></div>
+     <div class="box4 ">
+        <div>
+         <ion-icon name="layers"></ion-icon>
+        </div>
+        <div>
+        Trash Updates
+        </div>
+        <div id="categoryno3">0</div>
+    </div>
+</div>
+</section>
+
+
+<section id="category-section" class="section" style="display:none;">
+    <div class="card">
+        <h1>Manage Categories</h1>
+        <button id="add-category-btn">Add Category</button>
+        <div class="table-container">
+            <table id="category-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="category-list">
+                    <!-- Categories will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+        <section id="subcategory-section" class="section" style="display:none;">
+            <div class="card">
+                <h1>Manage Subcategories</h1>
+                <button id="add-subcategory-btn">Add Subcategory</button>
+                <div class="table-container">
+                    <table id="subcategory-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Subcategory</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subcategory-list">
+                            <!-- Categories will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="posts-section" class="section" style="display:none;">
+            <div class="card">
+                <h1>Manage Posts</h1>
+                <button id="add-post-btn">Add Post</button>
+                <div id="post-list"> 
+                    <!-- Posts will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="comments-section" class="section" style="display:none;">
+            <div class="card">
+                <h1>Manage Comments</h1>
+                <button id="add-comment-btn">Pending Approval</button>
+                <div id="comment-list"> 
+                    <!-- Comments will be loaded here -->
+                 </div>
+            </div>
+        </section>
+
+        <section id="pages-section" class="section" style="display:none;">
+            <div class="card">
+                <h1>About</h1>
+                
+                <!-- <div id="page-list">
+                    <!-- Pages will be loaded here -->
+                 <!-- </div>  -->
+            </div>
+        </section>
+        <section id="bu-addcat" class="section" style="display:none;">
+            <div class="card">
+                <h1>Add Category</h1>
+                <div class="para">
+                <h2>Add Category</h2>
+                <div class="bottomline"></div>
+                <form id="add-category-form">
+                    <div class="gap">
+                    <label for="category"> Category  :  </label>
+                    <input type="text" name="category" id="category"></div>
+                    <div class="gap"><label for="description">Description : </label>
+                        <div><textarea name="description" id="description"></textarea></div>
+                <button class="bo">Submit</button>
+                </form>
+
+            </div>
+            </div>
+        </section>
+
+
+        <section id="bu-addsubcat" class="section" style="display:none;">
+            <div class="card">
+                <h1>Add SubCategory</h1>
+                <div class="para" id="para">
+                <h2>Add SubCategory</h2>
+                <div class="bottomline"></div>
+                <form id="add-subcategory-form">
+                    <div class="gap">
+                    <label for="category"> Category  :  </label>
+                    <select placeholder="Select Category" name="category" id="category" size="1">
+                        <option value="option1">Meeting</option>
+                        <option value="option2">Test</option>
+                        <option value="option3">Schedule</option>
+                        <option value="option4">Coding Event</option>
+                        <option value="option5">Webinar</option>
+                    </select>
+                </div>
+                <div class="gap"><label for="Subcategory">Subcategory : </label>
+                    <input type="text" name="Subcategory" id="Subcategory"></div>
+                    <div class="gap"><label for="descriptionsub">Description : </label>
+                        <div><textarea name="descriptionsub" id="descriptionsub"></textarea></div>
+                <button class="bo">Submit</button>
+                </form>
+
+            </div>
+            </div>
+        </section>
+
+        <section id="bu-addpost" class="section" style="display:none;">
+            <div class="card">
+                <h2>Add Post</h2>
+                <div class="bottomline"></div>
+                <div class="cover">
+                
+                <form id="postborder">
+                    <div class="postbo">
+                    <!-- <div class="gap"> -->
+                    <div><label for="Post Title">Post Title</label></div>
+                <div>    <input type="text" name="PostTitle" id="PostTitle"></div>
+                   <div> <label for="categoryPost"> Category  :  </label></div>
+                    <div><select placeholder="Select Category" name="categoryPost" id="categoryPost" size="1">
+                        <option value="option1">Meeting</option>
+                        <option value="option2">Test</option>
+                        <option value="option3">Schedule</option>
+                        <option value="option4">Coding Event</option>
+                        <option value="option5">Webinar</option>
+                    </select></div>
+               
+              <div><label for="SubcategoryPost">Subcategory : </label></div>
+              <div><select placeholder="Select Sub-Category" name="SubcategoryPost" id="SubcategoryPost" size="1">
+                <option value="option1">All Students</option>
+                <option value="option2">Students Cabinet</option>
+                <option value="option3">Staff Members</option>
+            </select></div>
+                   <div> <label for="descriptionPost">Post Description : </label></div>
+                    <div><textarea name="descriptionPost" id="descriptionPost"></textarea></div>
+                    <div><label for ="photo">Upload Photo</label></div>
+                    <section>
+                    <div><input type="file" name="photo" id="photo"></div></section>
+                    <div class="flex">
+               <div> <button class="bo">Submit</button></div>
+               <div> <button class="discard">Discard</button></div> 
+                    </div></div></form>
+
+            </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+</div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/scripts.js"></script>
+    
+</body>
+</html>
